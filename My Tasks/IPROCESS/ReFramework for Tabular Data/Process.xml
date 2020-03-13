@@ -1,0 +1,136 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>11/20/2019 16:16:53</Created>
+		<RunDuration />
+		<TotalCommands>3</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/13/2020 19:23:15</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_transaction_id$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_id_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_data_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_item_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error_message$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_number$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Notepad\EscreverAtributos.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_log_file$; $pub_process$; $pub_system_error$; $pub_system_error_message$; $pub_transaction_id$; $pub_transaction_id_name$; $pub_transaction_item_file$; $pub_transaction_number$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Notepad\EscreverAtributos.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error_message</SourceVariable>
+				<DestinationVariable>pub_system_error_message</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id</SourceVariable>
+				<DestinationVariable>pub_transaction_id</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id_name</SourceVariable>
+				<DestinationVariable>pub_transaction_id_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_item_file</SourceVariable>
+				<DestinationVariable>pub_transaction_item_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_number</SourceVariable>
+				<DestinationVariable>pub_transaction_number</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>

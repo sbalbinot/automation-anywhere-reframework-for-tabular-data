@@ -1,0 +1,159 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>01/03/2020 18:45:16</Created>
+		<RunDuration />
+		<TotalCommands>23</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/04/2020 12:40:19</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">ReFramework</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">IPROCESS</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_log_folder$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_rename_file_aux$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define log folder">
+		<Name>Comment</Name>
+		<CommandText> Define log folder</CommandText>
+	</Command>
+	<Command EventData="String Operation: Before-After &quot;$AAApplicationPath$\Automation Anywhere\My Docs\$pub_project$\$pub_process$\Logs&quot; and assign output to $pvt_log_folder$">
+		<Name>BeforeAfter</Name>
+	</Command>
+	<Command EventData="If Folder Does Not Exist (&quot;$pvt_log_folder$&quot;)  Then  ">
+		<Name>If</Name>
+		<Condition Type="FolderNotExist">
+			<FolderPath>$pvt_log_folder$</FolderPath>
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Create log folder">
+		<Name>Comment</Name>
+		<CommandText> Create log folder</CommandText>
+	</Command><Command EventData="Create Folder &quot;$pvt_log_folder$&quot;">
+		<Name>CreateFolder</Name>
+	</Command>
+</Commands>
+</Command>
+	<Command Disabled="True" EventData="Comment:  Define log file">
+		<Name>Comment</Name>
+		<CommandText> Define log file</CommandText>
+	</Command>
+	<Command EventData="String Operation: Before-After &quot;$AAApplicationPath$\Automation Anywhere\My Docs\$pub_project$\$pub_process$\Logs\Log_$pub_process$.csv&quot; and assign output to $pub_log_file$">
+		<Name>BeforeAfter</Name>
+	</Command>
+	<Command Disabled="True" EventData="Comment:  If log file exists and size is bigger than 50mb, rename it">
+		<Name>Comment</Name>
+		<CommandText> If log file exists and size is bigger than 50mb, rename it</CommandText>
+	</Command>
+	<Command EventData="If File Exists (&quot;$pub_log_file$&quot;)  Then   ">
+		<Name>If</Name>
+		<Condition Type="FileExists">
+			<FileName>$pub_log_file$</FileName>
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command EventData="If File Size (&quot;$pub_log_file$&quot; Greather than or Equal To (&gt;=) &quot;10000&quot; )  Then   ">
+		<Name>If</Name>
+		<Condition Type="FileSize">
+			<FileName>$pub_log_file$</FileName>
+			<Operator>&gt;=</Operator>
+			<Value>1</Value>
+			<Variable />
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command EventData="Loop While $pvt_rename_file_aux$ Equal To (=) &quot;True&quot; ; Check condition at the end">
+		<Name>Loop</Name>
+		<Loop For="Variable" ExitConditionLoop="True">
+			<Condition Type="Variable">
+				<VariableName>$pvt_rename_file_aux$</VariableName>
+				<Operator>EqualTo</Operator>
+				<VariableValueType>Fix</VariableValueType>
+				<FixValue>True</FixValue>
+				<VariableValue />
+			</Condition>
+		</Loop>
+	<Commands>
+<Command EventData="Begin Error Handling; Action: Continue; Options: Variable Assignment,  Task Status: Pass">
+		<Name>ErrorHandling</Name>
+		<ErrorHandlingOptions>
+			<Action>Continue</Action>
+			<VariableAssignment>
+				<Variable>$pvt_rename_file_aux$</Variable>
+				<ValueToAssign>True</ValueToAssign>
+			</VariableAssignment>
+			<SetTaskStatus>Fail</SetTaskStatus>
+		</ErrorHandlingOptions>
+	<Commands>
+<Command EventData="Rename Files &quot;$pub_log_file$&quot; to &quot;$pub_log_file$.$Counter$.old&quot;  ">
+		<Name>RenameFiles</Name>
+	</Command><Command EventData="Variable Operation: False To $pvt_rename_file_aux$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_rename_file_aux$</Variable>
+		<VariableValue>False</VariableValue>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+	<Command EventData="If File Does Not Exist (&quot;$pub_log_file$&quot;)  Then  ">
+		<Name>If</Name>
+		<Condition Type="FileNotExist">
+			<FileName />
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Create new log file">
+		<Name>Comment</Name>
+		<CommandText> Create new log file</CommandText>
+	</Command><Command EventData="Log to File: TimeStamp;Machine;Process;Case Identifier;Task;Type;Message;Line Number in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>

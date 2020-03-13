@@ -1,0 +1,29 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>11/20/2019 16:17:05</Created>
+		<RunDuration />
+		<TotalCommands>0</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/13/2020 19:22:50</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+</Variables>
+<Commands>
+</Commands>
+</Task>

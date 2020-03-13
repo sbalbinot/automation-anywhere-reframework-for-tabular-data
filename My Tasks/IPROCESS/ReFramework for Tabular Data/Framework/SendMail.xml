@@ -1,0 +1,228 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>03/02/2020 14:41:47</Created>
+		<RunDuration />
+		<TotalCommands>16</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/02/2020 15:17:59</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_task_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_email_conclusao_from$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_email_conclusao_to$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_email_conclusao_cc$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_email_conclusao_bcc$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_status_file_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define AATaskName">
+		<Name>Comment</Name>
+		<CommandText> Define AATaskName</CommandText>
+	</Command>
+	<Command EventData="String Operation: Find &quot;(\w+).atmx&quot; within &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Find</Name>
+	</Command>
+	<Command EventData="String Operation: Extract substring from &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Substr</Name>
+	</Command>
+	<Command EventData="Begin Error Handling; Action: Stop Task; Options: Log to File, Variable Assignment,  Task Status: Fail">
+		<Name>ErrorHandling</Name>
+		<ErrorHandlingOptions>
+			<Action>Stop Task</Action>
+			<LogDataToFile>
+				<FilePath>$pub_log_file$</FilePath>
+				<Text>$Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;WARNING;$Error Description$;$Error Line Number$</Text>
+				<AddTimeStamp>false</AddTimeStamp>
+				<Append>true</Append>
+			</LogDataToFile>
+			<VariableAssignment>
+				<Variable>$pub_system_error$</Variable>
+				<ValueToAssign>Exception</ValueToAssign>
+			</VariableAssignment>
+			<SetTaskStatus>Pass</SetTaskStatus>
+		</ErrorHandlingOptions>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Get Config Attribute Value: Email Conclusao From">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: Email Conclusao From</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/Email_Conclusao_From</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_email_conclusao_from$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: Email Conclusao To">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: Email Conclusao To</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/Email_Conclusao_To</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_email_conclusao_to$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: Email Conclusao Cc">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: Email Conclusao Cc</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/Email_Conclusao_Cc</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_email_conclusao_cc$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: Email Conclusao Bcc">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: Email Conclusao Bcc</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/Email_Conclusao_Bcc</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_email_conclusao_bcc$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Send mail">
+		<Name>Comment</Name>
+		<CommandText> Send mail</CommandText>
+	</Command><Command EventData="Send Email: Subject &quot;RPA | $pub_process$&quot; with Attachment(s).">
+		<Name>Mail</Name>
+	</Command><Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;INFO;E-mail de finalização enviado com sucesso.; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>

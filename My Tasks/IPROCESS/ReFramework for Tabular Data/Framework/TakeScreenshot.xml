@@ -1,0 +1,219 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>11/20/2019 16:19:36</Created>
+		<RunDuration />
+		<TotalCommands>22</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>01/16/2020 19:43:59</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_exception_screenshot_folder$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_timestamp_format$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_date_now$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_task_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_screenshot$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define AATaskName">
+		<Name>Comment</Name>
+		<CommandText> Define AATaskName</CommandText>
+	</Command>
+	<Command EventData="String Operation: Find &quot;(\w+).atmx&quot; within &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Find</Name>
+	</Command>
+	<Command EventData="String Operation: Extract substring from &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Substr</Name>
+	</Command>
+	<Command EventData="Begin Error Handling; Action: Stop Task; Options: Log to File, Variable Assignment,  Task Status: Fail">
+		<Name>ErrorHandling</Name>
+		<ErrorHandlingOptions>
+			<Action>Stop Task</Action>
+			<LogDataToFile>
+				<FilePath>$pub_log_file$</FilePath>
+				<Text>$Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;WARNING;$Error Description$;$Error Line Number$</Text>
+				<AddTimeStamp>false</AddTimeStamp>
+				<Append>true</Append>
+			</LogDataToFile>
+			<VariableAssignment>
+				<Variable>$pub_system_error$</Variable>
+				<ValueToAssign>Exception</ValueToAssign>
+			</VariableAssignment>
+			<SetTaskStatus>Pass</SetTaskStatus>
+		</ErrorHandlingOptions>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Get Config Attribute Value: ExScreenshotsFolderPath">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: ExScreenshotsFolderPath</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Constants/ExScreenshotsFolderPath</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_exception_screenshot_folder$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: TimestampFormat">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: TimestampFormat</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Constants/TimestampFormat</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_timestamp_format$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Actual Date: DateNow">
+		<Name>Comment</Name>
+		<CommandText> Get Actual Date: DateNow</CommandText>
+	</Command><Command EventData="Run Logic &quot;Date\GetDateNow&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetDateNow</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>8114e7aa-974a-4e3f-abd6-0b04c30a7bbf</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$formato$</Name>
+				<Value>$pvt_timestamp_format$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$retorno$</Name>
+				<Value>$pvt_date_now$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Define screenshot folder">
+		<Name>Comment</Name>
+		<CommandText> Define screenshot folder</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$AAApplicationPath$\Automation Anywhere\My Docs\$pub_project$\$pub_process$\$pvt_exception_screenshot_folder$&quot; and assign output to $pvt_exception_screenshot_folder$">
+		<Name>BeforeAfter</Name>
+	</Command><Command Disabled="True" EventData="Comment:  If no file path">
+		<Name>Comment</Name>
+		<CommandText> If no file path</CommandText>
+	</Command><Command EventData="If Folder Does Not Exist (&quot;$pvt_exception_screenshot_folder$&quot;)  Then  ">
+		<Name>If</Name>
+		<Condition Type="FolderNotExist">
+			<FolderPath>$pvt_exception_screenshot_folder$</FolderPath>
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command EventData="Create Folder &quot;$pvt_exception_screenshot_folder$&quot;">
+		<Name>CreateFolder</Name>
+	</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment:  Define screenshot">
+		<Name>Comment</Name>
+		<CommandText> Define screenshot</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$pvt_exception_screenshot_folder$\ExceptionScreenshot-$pvt_date_now$.png&quot; and assign output to $pvt_screenshot$">
+		<Name>BeforeAfter</Name>
+	</Command><Command Disabled="True" EventData="Comment:  Take screenshot and save it">
+		<Name>Comment</Name>
+		<CommandText> Take screenshot and save it</CommandText>
+	</Command><Command EventData="Screen Capture : Capture Desktop and store in &quot;$pvt_screenshot$&quot; with overwrite option">
+		<Name>Desktop</Name>
+	</Command><Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;INFO;Screenshot salva em: $pvt_screenshot$; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>

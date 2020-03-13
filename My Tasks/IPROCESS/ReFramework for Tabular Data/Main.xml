@@ -1,0 +1,878 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>11/20/2019 16:07:18</Created>
+		<RunDuration />
+		<TotalCommands>77</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/02/2020 16:14:46</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_config$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">IPROCESS</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_data$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_status_file_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_id$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_item$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_number$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">1</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_task_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_id_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_data_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_step$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">INIT</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_retry_number$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">0</Value>
+	</Variable>
+<Variable>
+		<Name>$pub_status_file_structure$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_item_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error_message$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">ReFramework for Tabular Data</Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define AATaskName">
+		<Name>Comment</Name>
+		<CommandText> Define AATaskName</CommandText>
+	</Command>
+	<Command EventData="String Operation: Find &quot;(\w+).atmx&quot; within &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Find</Name>
+	</Command>
+	<Command EventData="String Operation: Extract substring from &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Substr</Name>
+	</Command>
+	<Command Disabled="True" EventData="Comment:  First execution: Create log file">
+		<Name>Comment</Name>
+		<CommandText> First execution: Create log file</CommandText>
+	</Command>
+	<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\DefineLogFile.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_log_file$; $pub_process$; $pub_project$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\DefineLogFile.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+	<Command Disabled="True" EventData="Comment: Process Starts">
+		<Name>Comment</Name>
+		<CommandText>Process Starts</CommandText>
+	</Command>
+	<Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;INFO;Iniciando processo $pub_process$...; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+	<Command EventData="Loop While $pvt_step$ Not Equal To(&lt;&gt;) &quot;END_PROCESS&quot; ">
+		<Name>Loop</Name>
+		<Loop For="Expression" ExitConditionLoop="True">
+			<Condition Type="Expression">
+				<LogicalOperator>Match All</LogicalOperator>
+				<Expressions>
+					<Expression>
+						<Variable>$pvt_step$</Variable>
+						<Operator>!=</Operator>
+						<ValueType>Fixed</ValueType>
+						<Value>END_PROCESS</Value>
+					</Expression>
+				</Expressions>
+			</Condition>
+		</Loop>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Init - Read Config, Init Applications">
+		<Name>Comment</Name>
+		<CommandText> Init - Read Config, Init Applications</CommandText>
+	</Command><Command EventData="If $pvt_step$ Equal To (=) &quot;INIT&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_step$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>INIT</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Initialize SystemError">
+		<Name>Comment</Name>
+		<CommandText> Initialize SystemError</CommandText>
+	</Command><Command EventData="Variable Operation: &quot;&quot; To $pub_system_error$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pub_system_error$</Variable>
+		<VariableValue />
+	</Command><Command EventData="If $pub_config$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_config$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  If first run: Read config, Kill processes">
+		<Name>Comment</Name>
+		<CommandText> If first run: Read config, Kill processes</CommandText>
+	</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\InitAllSettings.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config$; $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\InitAllSettings.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config</SourceVariable>
+				<DestinationVariable>pub_config</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\KillAllProcesses.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\KillAllProcesses.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment: Init all applications">
+		<Name>Comment</Name>
+		<CommandText>Init all applications</CommandText>
+	</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\InitAllApplications.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\InitAllApplications.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command><Command EventData="If $pub_transaction_data$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_transaction_data$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  First run: Read input data, Create status file">
+		<Name>Comment</Name>
+		<CommandText> First run: Read input data, Create status file</CommandText>
+	</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\ReadInputData.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$; $pub_transaction_data$; $pub_transaction_data_file$; $pub_transaction_id$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\ReadInputData.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_data</SourceVariable>
+				<DestinationVariable>pub_transaction_data</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_data_file</SourceVariable>
+				<DestinationVariable>pub_transaction_data_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id</SourceVariable>
+				<DestinationVariable>pub_transaction_id</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\DefineStatusFile.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_status_file_name$; $pub_status_file_structure$; $pub_system_error$; $pub_transaction_data_file$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\DefineStatusFile.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_status_file_name</SourceVariable>
+				<DestinationVariable>pub_status_file_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_status_file_structure</SourceVariable>
+				<DestinationVariable>pub_status_file_structure</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_data_file</SourceVariable>
+				<DestinationVariable>pub_transaction_data_file</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;Exception&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>Exception</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Variable Operation: END_PROCESS To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>END_PROCESS</VariableValue>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command EventData="Variable Operation: GET_TRANSACTION_DATA To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>GET_TRANSACTION_DATA</VariableValue>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment:  Get Transaction Data - Get next transaction input data">
+		<Name>Comment</Name>
+		<CommandText> Get Transaction Data - Get next transaction input data</CommandText>
+	</Command><Command EventData="If $pvt_step$ Equal To (=) &quot;GET_TRANSACTION_DATA&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_step$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>GET_TRANSACTION_DATA</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\GetTransactionData.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$; $pub_transaction_data_file$; $pub_transaction_id$; $pub_transaction_id_name$; $pub_transaction_item$; $pub_transaction_item_file$; $pub_transaction_number$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\GetTransactionData.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_data_file</SourceVariable>
+				<DestinationVariable>pub_transaction_data_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id</SourceVariable>
+				<DestinationVariable>pub_transaction_id</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id_name</SourceVariable>
+				<DestinationVariable>pub_transaction_id_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_item</SourceVariable>
+				<DestinationVariable>pub_transaction_item</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_item_file</SourceVariable>
+				<DestinationVariable>pub_transaction_item_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_number</SourceVariable>
+				<DestinationVariable>pub_transaction_number</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command><Command EventData="If $pub_transaction_item$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_transaction_item$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Variable Operation: END_PROCESS To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>END_PROCESS</VariableValue>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command EventData="Variable Operation: PROCESS_TRANSACTION To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>PROCESS_TRANSACTION</VariableValue>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment:  Process Transaction - A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried.">
+		<Name>Comment</Name>
+		<CommandText> Process Transaction - A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried.</CommandText>
+	</Command><Command EventData="If $pvt_step$ Equal To (=) &quot;PROCESS_TRANSACTION&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_step$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>PROCESS_TRANSACTION</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Variable Operation: &quot;&quot; To $pub_system_error$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pub_system_error$</Variable>
+		<VariableValue />
+	</Command><Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Process.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$; $pub_system_error_message$; $pub_transaction_data_file$; $pub_transaction_id$; $pub_transaction_id_name$; $pub_transaction_item_file$; $pub_transaction_number$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Process.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error_message</SourceVariable>
+				<DestinationVariable>pub_system_error_message</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_data_file</SourceVariable>
+				<DestinationVariable>pub_transaction_data_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id</SourceVariable>
+				<DestinationVariable>pub_transaction_id</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_id_name</SourceVariable>
+				<DestinationVariable>pub_transaction_id_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_item_file</SourceVariable>
+				<DestinationVariable>pub_transaction_item_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_number</SourceVariable>
+				<DestinationVariable>pub_transaction_number</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command><Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\SetTransactionStatus.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_retry_number$; $pub_status_file_name$; $pub_status_file_structure$; $pub_system_error$; $pub_system_error_message$; $pub_transaction_item_file$; $pub_transaction_number$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\SetTransactionStatus.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_retry_number</SourceVariable>
+				<DestinationVariable>pub_retry_number</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_status_file_name</SourceVariable>
+				<DestinationVariable>pub_status_file_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_status_file_structure</SourceVariable>
+				<DestinationVariable>pub_status_file_structure</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error_message</SourceVariable>
+				<DestinationVariable>pub_system_error_message</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_item_file</SourceVariable>
+				<DestinationVariable>pub_transaction_item_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_transaction_number</SourceVariable>
+				<DestinationVariable>pub_transaction_number</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;Exception&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>Exception</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Error">
+		<Name>Comment</Name>
+		<CommandText>Error</CommandText>
+	</Command><Command EventData="Variable Operation: INIT To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>INIT</VariableValue>
+	</Command>
+</Commands>
+</Command><Command EventData="Else If $pub_system_error$ Equal To (=) &quot;BusinessRuleException&quot; Then  ">
+		<Name>ElseIf</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>BusinessRuleException</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Rule Exception">
+		<Name>Comment</Name>
+		<CommandText>Rule Exception</CommandText>
+	</Command><Command EventData="Variable Operation: GET_TRANSACTION_DATA To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>GET_TRANSACTION_DATA</VariableValue>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Success">
+		<Name>Comment</Name>
+		<CommandText>Success</CommandText>
+	</Command><Command EventData="Variable Operation: GET_TRANSACTION_DATA To $pvt_step$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pvt_step$</Variable>
+		<VariableValue>GET_TRANSACTION_DATA</VariableValue>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+	<Command Disabled="True" EventData="Comment: End Process - Process stops here">
+		<Name>Comment</Name>
+		<CommandText>End Process - Process stops here</CommandText>
+	</Command>
+	<Command EventData="If $pvt_step$ Equal To (=) &quot;END_PROCESS&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_step$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>END_PROCESS</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: End of process activities">
+		<Name>Comment</Name>
+		<CommandText>End of process activities</CommandText>
+	</Command><Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\CloseAllApplications.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\CloseAllApplications.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command><Command EventData="If $pub_system_error$ Equal To (=) &quot;Exception&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_system_error$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>Exception</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\KillAllProcesses.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_project$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\KillAllProcesses.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_project</SourceVariable>
+				<DestinationVariable>pub_project</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment: Send mail">
+		<Name>Comment</Name>
+		<CommandText>Send mail</CommandText>
+	</Command><Command EventData="Run Task &quot;$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\SendMail.atmx&quot; @Repeat: Do Not Repeat @Speed: Normal Speed @Pass Variable as argument: $pub_config_file$; $pub_log_file$; $pub_process$; $pub_status_file_name$; $pub_system_error$">
+		<Name>Run Task</Name>
+		<Task>$AAApplicationPath$\Automation Anywhere\My Tasks\$pub_project$\$pub_process$\Framework\SendMail.atmx</Task>
+		<Speed>Standard</Speed>
+		<Option>Do Not Repeat</Option>
+		<MappedVariables>
+			<MappedVariable>
+				<SourceVariable>pub_config_file</SourceVariable>
+				<DestinationVariable>pub_config_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_log_file</SourceVariable>
+				<DestinationVariable>pub_log_file</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_process</SourceVariable>
+				<DestinationVariable>pub_process</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_status_file_name</SourceVariable>
+				<DestinationVariable>pub_status_file_name</DestinationVariable>
+			</MappedVariable>
+			<MappedVariable>
+				<SourceVariable>pub_system_error</SourceVariable>
+				<DestinationVariable>pub_system_error</DestinationVariable>
+			</MappedVariable>
+		</MappedVariables>
+	</Command>
+</Commands>
+</Command>
+	<Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;INFO;Processo $pub_process$ finalizado.; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Task>

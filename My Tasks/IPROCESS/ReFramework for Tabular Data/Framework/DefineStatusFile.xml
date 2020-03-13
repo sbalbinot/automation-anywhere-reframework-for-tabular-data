@@ -1,0 +1,415 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>01/02/2020 15:26:44</Created>
+		<RunDuration />
+		<TotalCommands>47</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>03/02/2020 16:13:45</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_timestamp_format$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_status_file_format$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_date_now$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_status_file_path$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_status_file_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_task_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_data_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_transaction_data_column_names_list$</Name>
+		<Type>List</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">&lt;Items&gt;
+	&lt;Item&gt;0&lt;/Item&gt;
+	&lt;/Items&gt;</Value>
+		<MakeRandom>False</MakeRandom>
+	</Variable>
+<Variable>
+		<Name>$pub_status_file_structure$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_status_file_exclude_columns$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define AATaskName">
+		<Name>Comment</Name>
+		<CommandText> Define AATaskName</CommandText>
+	</Command>
+	<Command EventData="String Operation: Find &quot;(\w+).atmx&quot; within &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Find</Name>
+	</Command>
+	<Command EventData="String Operation: Extract substring from &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Substr</Name>
+	</Command>
+	<Command EventData="Begin Error Handling; Action: Stop Task; Options: Log to File, Variable Assignment,  Task Status: Fail">
+		<Name>ErrorHandling</Name>
+		<ErrorHandlingOptions>
+			<Action>Stop Task</Action>
+			<LogDataToFile>
+				<FilePath>$pub_log_file$</FilePath>
+				<Text>$Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;ERROR;$Error Description$;$Error Line Number$</Text>
+				<AddTimeStamp>false</AddTimeStamp>
+				<Append>true</Append>
+			</LogDataToFile>
+			<VariableAssignment>
+				<Variable>$pub_system_error$</Variable>
+				<ValueToAssign>Exception</ValueToAssign>
+			</VariableAssignment>
+			<SetTaskStatus>Pass</SetTaskStatus>
+		</ErrorHandlingOptions>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Get Config Attribute Value List: StatusFileExcludeColumns (We might be required to exclude some columns from the status file, as defined in Settings file, StatusFileExcludeColumns parameter.)">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value List: StatusFileExcludeColumns (We might be required to exclude some columns from the status file, as defined in Settings file, StatusFileExcludeColumns parameter.)</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>//Data/Settings/StatusFileExcludeColumns</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_status_file_exclude_columns$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Transaction Data Column Names: TransactionDataColumnNamesList">
+		<Name>Comment</Name>
+		<CommandText> Get Transaction Data Column Names: TransactionDataColumnNamesList</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLChildNodeNameList&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLChildNodeNameList</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>07e8ecb5-bed5-4824-bc0d-2959de38735a</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>//Data/Row</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_transaction_data_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value_list$</Name>
+				<Value>$pvt_transaction_data_column_names_list$</Value>
+				<Type>List</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Assign Status File Structure">
+		<Name>Comment</Name>
+		<CommandText> Assign Status File Structure</CommandText>
+	</Command><Command EventData="Start Loop &quot;List Variable $pvt_transaction_data_column_names_list$&quot; ">
+		<Name>Loop</Name>
+		<Loop For="List" List="$pvt_transaction_data_column_names_list$" />
+	<Commands>
+<Command EventData="If $pvt_status_file_exclude_columns$ Does Not Include $pvt_transaction_data_column_names_list$ Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_status_file_exclude_columns$</VariableName>
+			<Operator>DoesNotInclude</Operator>
+			<VariableValueType>Variable</VariableValueType>
+			<FixValue />
+			<VariableValue>$pvt_transaction_data_column_names_list$</VariableValue>
+		</Condition>
+	<Commands>
+<Command EventData="If $pub_status_file_structure$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_status_file_structure$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command EventData="String Operation: Before-After &quot;$pvt_transaction_data_column_names_list$&quot; and assign output to $pub_status_file_structure$">
+		<Name>BeforeAfter</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command EventData="String Operation: Before-After &quot;$pub_status_file_structure$;$pvt_transaction_data_column_names_list$&quot; and assign output to $pub_status_file_structure$">
+		<Name>BeforeAfter</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment: Add new columns to Status File (Status File is constructed starting from input file structure + 3 new columns at the beginning:&#xA; - Transaction ID&#xA; - Status &#xA; - Remarks. &#xA;&#xA;The names of the extra columns are suffixed with &quot; - AutomationAnywhere ReFramework&quot; to try to avoid possible errors caused by having same column names already present in the input file.)">
+		<Name>Comment</Name>
+		<CommandText>Add new columns to Status File (Status File is constructed starting from input file structure + 3 new columns at the beginning:  - Transaction ID  - Status   - Remarks.   The names of the extra columns are suffixed with  - AutomationAnywhere ReFramework to try to avoid possible errors caused by having same column names already present in the input file.)</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;Transaction ID - AutomationAnywhere ReFramework;Status - AutomationAnywhere ReFramework;Remarks - AutomationAnywhere ReFramework;$pub_status_file_structure$&quot; and assign output to $pub_status_file_structure$">
+		<Name>BeforeAfter</Name>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: StatusFilePath">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: StatusFilePath</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/StatusFilePath</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_status_file_path$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command EventData="String Operation: Before-After &quot;$AAApplicationPath$\Automation Anywhere\My Docs\$pub_project$\$pub_process$\$pvt_status_file_path$&quot; and assign output to $pvt_status_file_path$">
+		<Name>BeforeAfter</Name>
+	</Command><Command Disabled="True" EventData="Comment:  If Status Folder does not exits, create it">
+		<Name>Comment</Name>
+		<CommandText> If Status Folder does not exits, create it</CommandText>
+	</Command><Command EventData="If Folder Does Not Exist (&quot;$pvt_status_file_path$&quot;)  Then  ">
+		<Name>If</Name>
+		<Condition Type="FolderNotExist">
+			<FolderPath>$pvt_status_file_path$</FolderPath>
+			<Wait>0</Wait>
+		</Condition>
+	<Commands>
+<Command EventData="Create Folder &quot;$pvt_status_file_path$&quot;">
+		<Name>CreateFolder</Name>
+	</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: TimestampFormat">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: TimestampFormat</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Constants/TimestampFormat</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_timestamp_format$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Get Actual Date: DateNow">
+		<Name>Comment</Name>
+		<CommandText> Get Actual Date: DateNow</CommandText>
+	</Command><Command EventData="Run Logic &quot;Programming\Date\GetDateNow&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetDateNow</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>eb380250-e162-49fe-9b57-2c4bbf44dd61</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$format$</Name>
+				<Value>$pvt_timestamp_format$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$out_date$</Name>
+				<Value>$pvt_date_now$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Assign Status File Name (Only the path and name, without the extension. The extension is added later.)">
+		<Name>Comment</Name>
+		<CommandText> Assign Status File Name (Only the path and name, without the extension. The extension is added later.)</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$pvt_status_file_path$$pub_process$-$pvt_date_now$&quot; and assign output to $pub_status_file_name$">
+		<Name>BeforeAfter</Name>
+	</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: StatusFileFormat">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: StatusFileFormat</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/StatusFileFormat</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pvt_status_file_format$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command Disabled="True" EventData="Comment:  Check the status file type">
+		<Name>Comment</Name>
+		<CommandText> Check the status file type</CommandText>
+	</Command><Command EventData="If $pvt_status_file_format$ Equal To (=) &quot;Excel&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_status_file_format$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>Excel</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Assign .xlsx extension">
+		<Name>Comment</Name>
+		<CommandText>Assign .xlsx extension</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$pub_status_file_name$.xlsx&quot; and assign output to $pub_status_file_name$">
+		<Name>BeforeAfter</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="Else If $pvt_status_file_format$ Equal To (=) &quot;TXT&quot; Then  ">
+		<Name>ElseIf</Name>
+		<Condition Type="Variable">
+			<VariableName>$pvt_status_file_format$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue>TXT</FixValue>
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Assign .txt extension">
+		<Name>Comment</Name>
+		<CommandText>Assign .txt extension</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$pub_status_file_name$.txt&quot; and assign output to $pub_status_file_name$">
+		<Name>BeforeAfter</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Assign .csv extension">
+		<Name>Comment</Name>
+		<CommandText>Assign .csv extension</CommandText>
+	</Command><Command EventData="String Operation: Before-After &quot;$pub_status_file_name$.csv&quot; and assign output to $pub_status_file_name$">
+		<Name>BeforeAfter</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>

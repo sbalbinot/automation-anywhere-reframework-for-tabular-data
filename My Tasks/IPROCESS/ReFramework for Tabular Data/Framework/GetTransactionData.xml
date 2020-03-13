@@ -1,0 +1,275 @@
+<Task>
+<TaskProperties>
+		<Description />
+		<Created>11/20/2019 16:18:18</Created>
+		<RunDuration />
+		<TotalCommands>39</TotalCommands>
+		<TotalClicks>0</TotalClicks>
+		<TotalMouseClicks>0</TotalMouseClicks>
+		<TotalKeystrokes>0</TotalKeystrokes>
+		<RepeatType>Do Not Repeat</RepeatType>
+		<ReplaySpeedType>0</ReplaySpeedType>
+		<LastModified>01/16/2020 09:24:57</LastModified>
+		<PlayModeType>Standard</PlayModeType>
+		<IsRunWithSimilerWindows>False</IsRunWithSimilerWindows>
+		<IsNotifyEMail>False</IsNotifyEMail>
+		<Email />
+		<PriorityType>Low</PriorityType>
+		<IsBlockKeystroke>False</IsBlockKeystroke>
+		<IsStealthMode>False</IsStealthMode>
+		<IsCapsLockOn>False</IsCapsLockOn>
+		<IsNumLockOn>True</IsNumLockOn>
+		<TaskTimeout>0</TaskTimeout>
+		<IsContentAnalyticsEnabled>False</IsContentAnalyticsEnabled>
+	</TaskProperties>
+<Variables>
+<Variable>
+		<Name>$pub_transaction_number$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_item$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_td_rows_count$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_ti_rows_count$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_ti_row_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_ti_row_value$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_process$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_log_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_system_error$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pvt_task_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_id$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_id_name$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_data_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_transaction_item_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_config_file$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+<Variable>
+		<Name>$pub_project$</Name>
+		<Type>Value</Type>
+		<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p3:type="q1:string" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance"></Value>
+	</Variable>
+</Variables>
+<Commands>
+	<Command Disabled="True" EventData="Comment:  Define AATaskName">
+		<Name>Comment</Name>
+		<CommandText> Define AATaskName</CommandText>
+	</Command>
+	<Command EventData="String Operation: Find &quot;(\w+).atmx&quot; within &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Find</Name>
+	</Command>
+	<Command EventData="String Operation: Extract substring from &quot;$AATaskName$&quot; and assign output to $pvt_task_name$">
+		<Name>Substr</Name>
+	</Command>
+	<Command Disabled="True" EventData="Comment:  Define Transaction Item file">
+		<Name>Comment</Name>
+		<CommandText> Define Transaction Item file</CommandText>
+	</Command>
+	<Command EventData="String Operation: Before-After &quot;$AAApplicationPath$\Automation Anywhere\My Docs\$pub_project$\$pub_process$\TransactionItem.xml&quot; and assign output to $pub_transaction_item_file$">
+		<Name>BeforeAfter</Name>
+	</Command>
+	<Command EventData="Begin Error Handling; Action: Stop Task; Options: Log to File, Variable Assignment,  Task Status: Fail">
+		<Name>ErrorHandling</Name>
+		<ErrorHandlingOptions>
+			<Action>Stop Task</Action>
+			<LogDataToFile>
+				<FilePath>$pub_log_file$</FilePath>
+				<Text>$Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;ERROR;$Error Description$;$Error Line Number$</Text>
+				<AddTimeStamp>false</AddTimeStamp>
+				<Append>true</Append>
+			</LogDataToFile>
+			<VariableAssignment>
+				<Variable>$pub_system_error$</Variable>
+				<ValueToAssign>Exception</ValueToAssign>
+			</VariableAssignment>
+			<SetTaskStatus>Pass</SetTaskStatus>
+		</ErrorHandlingOptions>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Get Transaction Data rows count">
+		<Name>Comment</Name>
+		<CommandText> Get Transaction Data rows count</CommandText>
+	</Command><Command EventData="XML : Start XML Session using existing file &quot;$pub_transaction_data_file$&quot; Session:TransactionData">
+		<Name>StartXMLSession</Name>
+	</Command><Command EventData="XML : Execute XPath Function 'count(//Row)' and assign to variable '$pvt_td_rows_count$'. Session:'TransactionData'">
+		<Name>ExeXPath</Name>
+	</Command><Command Disabled="True" EventData="Comment:  If - Rows to process">
+		<Name>Comment</Name>
+		<CommandText> If - Rows to process</CommandText>
+	</Command><Command EventData="If $pub_transaction_number$ Less than or Equal To(&lt;=) $pvt_td_rows_count$ Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_transaction_number$</VariableName>
+			<VariableValueType>Variable</VariableValueType>
+			<FixValue />
+			<VariableValue>$pvt_td_rows_count$</VariableValue>
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Assign Transaction Item">
+		<Name>Comment</Name>
+		<CommandText>Assign Transaction Item</CommandText>
+	</Command><Command EventData="XML : Start XML Session using text &lt;...&gt; Session:TransactionItem">
+		<Name>StartXMLSession</Name>
+	</Command><Command EventData="XML : Execute XPath Function 'count(//Row[@ID=$pub_transaction_number$]/*)' and assign to variable '$pvt_ti_rows_count$'. Session:'TransactionData'">
+		<Name>ExeXPath</Name>
+	</Command><Command EventData="Start Loop &quot;$pvt_ti_rows_count$&quot; Times ">
+		<Name>Loop</Name>
+		<Loop For="Times" Times="$pvt_ti_rows_count$" />
+	<Commands>
+<Command EventData="XML : Execute XPath Function 'name(//Row[@ID=$pub_transaction_number$]/*[$Counter$])' and assign to variable '$pvt_ti_row_name$'. Session:'TransactionData'">
+		<Name>ExeXPath</Name>
+	</Command><Command EventData="XML : Get Single Node value from XPath location &quot;//Row[@ID=$pub_transaction_number$]/*[$Counter$]&quot; and assign to variable &quot;$pvt_ti_row_value$&quot;. Session:TransactionData">
+		<Name>GetNode</Name>
+	</Command><Command EventData="XML : Insert Node with name &quot;$pvt_ti_row_name$&quot; and value &quot;$pvt_ti_row_value$&quot; at XPath location &quot;//Row[@ID=$pub_transaction_number$]&quot;. Session:TransactionItem">
+		<Name>InsertNode</Name>
+	</Command>
+</Commands>
+</Command><Command Disabled="True" EventData="Comment:  Get Config Attribute Value: Log_TransactionID">
+		<Name>Comment</Name>
+		<CommandText> Get Config Attribute Value: Log_TransactionID</CommandText>
+	</Command><Command EventData="Run Logic &quot;ReFramework\GetXMLAttributeValue&quot; from MetaBot &quot;My MetaBots\IPROCESS\Library.mbot&quot;">
+		<Name>Logic</Name>
+		<MetaBot>\IPROCESS\Library.mbot</MetaBot>
+		<Logic>GetXMLAttributeValue</Logic>
+		<MetaBotId>91c132f1-fe89-4b96-9176-1a02aad66402</MetaBotId>
+		<LogicId>c4a22ca2-e3dd-44cf-8afc-07d8811a22e9</LogicId>
+		<InputParameters>
+			<Parameter>
+				<Name>$node$</Name>
+				<Value>/Data/Settings/Log_TransactionID</Value>
+				<Type>Value</Type>
+			</Parameter>
+			<Parameter>
+				<Name>$xml$</Name>
+				<Value>$pub_config_file$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</InputParameters>
+		<OutputParameters>
+			<Parameter>
+				<Name>$value$</Name>
+				<Value>$pub_transaction_id_name$</Value>
+				<Type>Value</Type>
+			</Parameter>
+		</OutputParameters>
+	</Command><Command EventData="If $pub_transaction_id_name$ Equal To (=) &quot;&quot; Then  ">
+		<Name>If</Name>
+		<Condition Type="Variable">
+			<VariableName>$pub_transaction_id_name$</VariableName>
+			<Operator>EqualTo</Operator>
+			<VariableValueType>Fix</VariableValueType>
+			<FixValue />
+			<VariableValue />
+		</Condition>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Transaction ID is null set its value as Transaction Number">
+		<Name>Comment</Name>
+		<CommandText> Transaction ID is null set its value as Transaction Number</CommandText>
+	</Command><Command EventData="Variable Operation: $pub_transaction_number$ To $pub_transaction_id$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pub_transaction_id$</Variable>
+		<VariableValue>$pub_transaction_number$</VariableValue>
+	</Command><Command EventData="Variable Operation: Transaction Number To $pub_transaction_id_name$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pub_transaction_id_name$</Variable>
+		<VariableValue>Transaction Number</VariableValue>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command Disabled="True" EventData="Comment:  Get Transaction Data Attribute Value: TransactionID">
+		<Name>Comment</Name>
+		<CommandText> Get Transaction Data Attribute Value: TransactionID</CommandText>
+	</Command><Command EventData="XML : Get Single Node value from XPath location &quot;//Row[@ID=$pub_transaction_number$]/$pub_transaction_id_name$&quot; and assign to variable &quot;$pub_transaction_id$&quot;. Session:TransactionData">
+		<Name>GetNode</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="XML : Save Session Data assigned to variable &quot;$pub_transaction_item$&quot;; Write Session Data into a new file &quot;$pub_transaction_item_file$&quot; with overwrite file if exists. Session:TransactionItem">
+		<Name>SaveXML</Name>
+	</Command><Command EventData="XML : End XML Session. Session:TransactionItem">
+		<Name>EndSession</Name>
+	</Command><Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;$pub_transaction_id_name$: $pub_transaction_id$;$pvt_task_name$;INFO;Processando transação: $pub_transaction_number$; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="Else">
+		<Name>Else</Name>
+	<Commands>
+<Command Disabled="True" EventData="Comment: Set Transaction Item as null to stop">
+		<Name>Comment</Name>
+		<CommandText>Set Transaction Item as null to stop</CommandText>
+	</Command><Command EventData="Variable Operation: &quot;&quot; To $pub_transaction_item$">
+		<Name>VariableOperation</Name>
+		<OperationType>Variable operation</OperationType>
+		<VariableType>User Variables</VariableType>
+		<Variable>$pub_transaction_item$</Variable>
+		<VariableValue />
+	</Command><Command EventData="Log to File: $Year$-$Month$-$Day$ $Hour$:$Minute$:$Second$;$Machine$;$pub_process$;;$pvt_task_name$;INFO;Processo finalizado por não haver mais dados de transação.; in &quot;$pub_log_file$&quot;">
+		<Name>LogToFile</Name>
+	</Command>
+</Commands>
+</Command><Command EventData="XML : End XML Session. Session:TransactionData">
+		<Name>EndSession</Name>
+	</Command>
+</Commands>
+</Command>
+</Commands>
+</Task>
